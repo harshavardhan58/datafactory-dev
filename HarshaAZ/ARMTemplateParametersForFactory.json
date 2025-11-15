@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "HarshaAZ"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "harshabandarla.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "ADF_Pipeline_Practice"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "harsha@mymedi.ai"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_server": {
+			"value": "harshabandarla.database.windows.net"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_database": {
+			"value": "BI-Project-RG"
+		},
+		"AzureSqlDatabase3_properties_typeProperties_userName": {
+			"value": "CloudSA650ea8cd"
+		}
+	}
+}
