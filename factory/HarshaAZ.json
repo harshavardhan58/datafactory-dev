@@ -1,0 +1,9 @@
+{
+	"name": "HarshaAZ",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2976c30a-17b8-4b02-a6bc-b3bfa58c7d31",
+		"tenantId": "1a924cf9-9b20-4e16-91f0-3ba5369d3a99"
+	}
+}

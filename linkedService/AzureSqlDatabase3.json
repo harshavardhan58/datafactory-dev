@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlDatabase3",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "harshabandarla.database.windows.net",
+			"database": "BI-Project-RG",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "CloudSA650ea8cd",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEIyNTMyREU0LTM1MzYtNERCOS05Q0E5LTVEQ0VBOTExQ0Y4N19iY2EwY2EwYi1mZDVmLTQ2OTEtODQ1My01ZTJjMzU5MmVmMzIiDQp9"
+		}
+	}
+}
