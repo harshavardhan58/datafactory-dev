@@ -53,7 +53,377 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/Orders')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Blob to SQL",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "ExcelSource",
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							},
+							"sink": {
+								"type": "AzureSqlSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "Row ID",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Row_ID",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Order Priority",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Order_Priority",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Discount",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Discount",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Unit Price",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Unit_Price",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Shipping Cost",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Shipping_Cost",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Customer ID",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Customer_ID",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Customer Name",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Customer_Name",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Ship Mode",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Ship_Mode",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Customer Segment",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Customer_Segment",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Product Category",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Product_Category",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Product Sub-Category",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Product_Sub_Category",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Product Container",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Product_Container",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Product Name",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Product_Name",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Product Base Margin",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Product_Base_Margin",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Country",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Country",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Region",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Region",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "State or Province",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "State_or_Province",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "City",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "City",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Postal Code",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Postal_Code",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Order Date",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Order_Date",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Ship Date",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Ship_Date",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Profit",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Profit",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Quantity ordered new",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Quantity_Ordered_New",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Sales",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Sales",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Order ID",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Order_ID",
+											"type": "String",
+											"physicalType": "varchar"
+										}
+									}
+								],
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "Orders",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Orders_SQL",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/Orders')]",
+				"[concat(variables('factoryId'), '/datasets/Orders_SQL')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Returns')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -91,22 +461,25 @@
 									{
 										"source": {
 											"name": "Order ID",
-											"type": "String"
+											"type": "String",
+											"physicalType": "String"
 										},
 										"sink": {
 											"name": "order ID",
-											"type": "int",
-											"precision": 10
+											"type": "Int32",
+											"physicalType": "int"
 										}
 									},
 									{
 										"source": {
 											"name": "Status",
-											"type": "String"
+											"type": "String",
+											"physicalType": "String"
 										},
 										"sink": {
 											"name": "status",
-											"type": "varchar"
+											"type": "String",
+											"physicalType": "varchar"
 										}
 									}
 								],
@@ -429,6 +802,255 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Orders')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Excel",
+				"typeProperties": {
+					"sheetName": "Orders",
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "SuperStoreUS-2015.xlsx",
+						"container": "orders"
+					},
+					"firstRowAsHeader": true
+				},
+				"schema": [
+					{
+						"name": "Row ID",
+						"type": "String"
+					},
+					{
+						"name": "Order Priority",
+						"type": "String"
+					},
+					{
+						"name": "Discount",
+						"type": "String"
+					},
+					{
+						"name": "Unit Price",
+						"type": "String"
+					},
+					{
+						"name": "Shipping Cost",
+						"type": "String"
+					},
+					{
+						"name": "Customer ID",
+						"type": "String"
+					},
+					{
+						"name": "Customer Name",
+						"type": "String"
+					},
+					{
+						"name": "Ship Mode",
+						"type": "String"
+					},
+					{
+						"name": "Customer Segment",
+						"type": "String"
+					},
+					{
+						"name": "Product Category",
+						"type": "String"
+					},
+					{
+						"name": "Product Sub-Category",
+						"type": "String"
+					},
+					{
+						"name": "Product Container",
+						"type": "String"
+					},
+					{
+						"name": "Product Name",
+						"type": "String"
+					},
+					{
+						"name": "Product Base Margin",
+						"type": "String"
+					},
+					{
+						"name": "Country",
+						"type": "String"
+					},
+					{
+						"name": "Region",
+						"type": "String"
+					},
+					{
+						"name": "State or Province",
+						"type": "String"
+					},
+					{
+						"name": "City",
+						"type": "String"
+					},
+					{
+						"name": "Postal Code",
+						"type": "String"
+					},
+					{
+						"name": "Order Date",
+						"type": "String"
+					},
+					{
+						"name": "Ship Date",
+						"type": "String"
+					},
+					{
+						"name": "Profit",
+						"type": "String"
+					},
+					{
+						"name": "Quantity ordered new",
+						"type": "String"
+					},
+					{
+						"name": "Sales",
+						"type": "String"
+					},
+					{
+						"name": "Order ID",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Orders_SQL')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase3",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "Row_ID",
+						"type": "varchar"
+					},
+					{
+						"name": "Order_Priority",
+						"type": "varchar"
+					},
+					{
+						"name": "Discount",
+						"type": "varchar"
+					},
+					{
+						"name": "Unit_Price",
+						"type": "varchar"
+					},
+					{
+						"name": "Shipping_Cost",
+						"type": "varchar"
+					},
+					{
+						"name": "Customer_ID",
+						"type": "varchar"
+					},
+					{
+						"name": "Customer_Name",
+						"type": "varchar"
+					},
+					{
+						"name": "Ship_Mode",
+						"type": "varchar"
+					},
+					{
+						"name": "Customer_Segment",
+						"type": "varchar"
+					},
+					{
+						"name": "Product_Category",
+						"type": "varchar"
+					},
+					{
+						"name": "Product_Sub_Category",
+						"type": "varchar"
+					},
+					{
+						"name": "Product_Container",
+						"type": "varchar"
+					},
+					{
+						"name": "Product_Name",
+						"type": "varchar"
+					},
+					{
+						"name": "Product_Base_Margin",
+						"type": "varchar"
+					},
+					{
+						"name": "Country",
+						"type": "varchar"
+					},
+					{
+						"name": "Region",
+						"type": "varchar"
+					},
+					{
+						"name": "State_or_Province",
+						"type": "varchar"
+					},
+					{
+						"name": "City",
+						"type": "varchar"
+					},
+					{
+						"name": "Postal_Code",
+						"type": "varchar"
+					},
+					{
+						"name": "Order_Date",
+						"type": "varchar"
+					},
+					{
+						"name": "Ship_Date",
+						"type": "varchar"
+					},
+					{
+						"name": "Profit",
+						"type": "varchar"
+					},
+					{
+						"name": "Quantity_Ordered_New",
+						"type": "varchar"
+					},
+					{
+						"name": "Sales",
+						"type": "varchar"
+					},
+					{
+						"name": "Order_ID",
+						"type": "varchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "ORDERS"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase3')]"
 			]
 		},
 		{
