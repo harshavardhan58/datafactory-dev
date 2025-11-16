@@ -319,13 +319,6 @@
 									"type": "String",
 									"physicalType": "varchar"
 								}
-							},
-							{
-								"sink": {
-									"name": "Order_ID",
-									"type": "String",
-									"physicalType": "varchar"
-								}
 							}
 						],
 						"typeConversion": true,
