@@ -19,8 +19,8 @@
 						"type": "ExcelSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"fileListPath": "orders/SuperStoreUS-2015.xlsx",
-							"enablePartitionDiscovery": true
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						}
 					},
 					"sink": {
