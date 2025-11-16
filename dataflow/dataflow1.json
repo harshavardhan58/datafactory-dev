@@ -19,9 +19,6 @@
 				}
 			],
 			"scriptLines": [
-				"parameters{",
-				"     Rank_ as integer (sum(Sales))",
-				"}",
 				"source(output(",
 				"          Row_ID as string,",
 				"          Order_Priority as string,",
