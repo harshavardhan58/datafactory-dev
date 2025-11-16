@@ -264,7 +264,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "Employees"
+					"table": "returns"
 				}
 			},
 			"dependsOn": [
@@ -540,12 +540,12 @@
 				"annotations": [],
 				"type": "Excel",
 				"typeProperties": {
-					"sheetName": "Returns",
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": "SuperStoreUS-2015.xlsx",
 						"container": "orders"
 					},
+					"sheetIndex": 1,
 					"firstRowAsHeader": true
 				},
 				"schema": [
@@ -593,9 +593,7 @@
 							"sink": {
 								"type": "AzureSqlSink",
 								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false,
-								"tableOption": "autoCreate",
-								"disableMetricsCollection": false
+								"sqlWriterUseTableLock": false
 							},
 							"enableStaging": false,
 							"translator": {
