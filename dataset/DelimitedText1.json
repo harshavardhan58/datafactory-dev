@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "orders.csv",
+				"fileName": "SuperStoreUS-2015.csv",
 				"container": "orders"
 			},
 			"columnDelimiter": ",",
