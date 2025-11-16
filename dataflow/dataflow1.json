@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "AzureSqlDatabaseDataSource",
+						"referenceName": "Orders_SQL",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -15,7 +15,34 @@
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          Row_ID as string,",
+				"          Order_Priority as string,",
+				"          Discount as string,",
+				"          Unit_Price as string,",
+				"          Shipping_Cost as string,",
+				"          Customer_ID as string,",
+				"          Customer_Name as string,",
+				"          Ship_Mode as string,",
+				"          Customer_Segment as string,",
+				"          Product_Category as string,",
+				"          Product_Sub_Category as string,",
+				"          Product_Container as string,",
+				"          Product_Name as string,",
+				"          Product_Base_Margin as string,",
+				"          Country as string,",
+				"          Region as string,",
+				"          State_or_Province as string,",
+				"          City as string,",
+				"          Postal_Code as string,",
+				"          Order_Date as string,",
+				"          Ship_Date as string,",
+				"          Profit as string,",
+				"          Quantity_Ordered_New as string,",
+				"          Sales as string,",
+				"          Order_ID as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1"
