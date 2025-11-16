@@ -87,6 +87,29 @@
 							"enableStaging": false,
 							"translator": {
 								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "Order ID",
+											"type": "String"
+										},
+										"sink": {
+											"name": "order ID",
+											"type": "int",
+											"precision": 10
+										}
+									},
+									{
+										"source": {
+											"name": "Status",
+											"type": "String"
+										},
+										"sink": {
+											"name": "status",
+											"type": "varchar"
+										}
+									}
+								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -133,109 +156,12 @@
 				"type": "AzureSqlTable",
 				"schema": [
 					{
-						"name": "Row_ID",
+						"name": "order ID",
 						"type": "int",
 						"precision": 10
 					},
 					{
-						"name": "Order_Priority",
-						"type": "varchar"
-					},
-					{
-						"name": "Discount",
-						"type": "varchar"
-					},
-					{
-						"name": "Unit_Price",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Shipping_Cost",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Customer_ID",
-						"type": "varchar"
-					},
-					{
-						"name": "Customer_Name",
-						"type": "varchar"
-					},
-					{
-						"name": "Ship_Mode",
-						"type": "varchar"
-					},
-					{
-						"name": "Customer_Segment",
-						"type": "varchar"
-					},
-					{
-						"name": "Product_Category",
-						"type": "varchar"
-					},
-					{
-						"name": "Product_Sub_Category",
-						"type": "varchar"
-					},
-					{
-						"name": "Product_Container",
-						"type": "varchar"
-					},
-					{
-						"name": "Product_Name",
-						"type": "varchar"
-					},
-					{
-						"name": "Product_Base_Margin",
-						"type": "varchar"
-					},
-					{
-						"name": "Country",
-						"type": "varchar"
-					},
-					{
-						"name": "Region",
-						"type": "varchar"
-					},
-					{
-						"name": "State_or_Province",
-						"type": "varchar"
-					},
-					{
-						"name": "City",
-						"type": "varchar"
-					},
-					{
-						"name": "Postal_Code",
-						"type": "varchar"
-					},
-					{
-						"name": "Order_Date",
-						"type": "date"
-					},
-					{
-						"name": "Ship_Date",
-						"type": "date"
-					},
-					{
-						"name": "Profit",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Quantity_ordered_new",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Sales",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Order_ID",
+						"name": "status",
 						"type": "varchar"
 					}
 				],
