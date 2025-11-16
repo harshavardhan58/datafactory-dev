@@ -141,6 +141,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Category",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Category",
 									"type": "String",
@@ -148,6 +153,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Sub-Category",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Sub_Category",
 									"type": "String",
@@ -155,6 +165,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Container",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Container",
 									"type": "String",
@@ -162,6 +177,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Name",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Name",
 									"type": "String",
@@ -169,6 +189,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Base Margin",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Base_Margin",
 									"type": "String",
@@ -200,6 +225,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "State or Province",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "State_or_Province",
 									"type": "String",
@@ -219,6 +249,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Postal Code",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Postal_Code",
 									"type": "String",
@@ -226,6 +261,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Order Date",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Order_Date",
 									"type": "String",
@@ -233,6 +273,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Ship Date",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Ship_Date",
 									"type": "String",
@@ -252,6 +297,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Quantity ordered new",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Quantity_Ordered_New",
 									"type": "String",
