@@ -13,6 +13,7 @@
 				"fileName": "SuperStoreUS-2015.xlsx",
 				"container": "orders"
 			},
+			"sheetIndex": 1,
 			"firstRowAsHeader": true
 		},
 		"schema": [
