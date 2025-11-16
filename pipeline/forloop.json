@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "forloop",
 	"properties": {
 		"activities": [
 			{
@@ -78,7 +78,13 @@
 							"inputs": [
 								{
 									"referenceName": "loop",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"filename": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
