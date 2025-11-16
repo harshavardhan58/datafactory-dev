@@ -31,29 +31,6 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Order ID",
-									"type": "String"
-								},
-								"sink": {
-									"name": "order ID",
-									"type": "int",
-									"precision": 10
-								}
-							},
-							{
-								"source": {
-									"name": "Status",
-									"type": "String"
-								},
-								"sink": {
-									"name": "status",
-									"type": "varchar"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
