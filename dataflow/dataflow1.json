@@ -19,6 +19,9 @@
 				}
 			],
 			"scriptLines": [
+				"parameters{",
+				"     Rank_ as string",
+				"}",
 				"source(output(",
 				"          Row_ID as string,",
 				"          Order_Priority as string,",
@@ -50,7 +53,7 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1",
-				"source1 rank(asc(Sales, true),",
+				"source1 rank(asc(Profit, true),",
 				"     output(Rank as long)) ~> rank1"
 			]
 		}
