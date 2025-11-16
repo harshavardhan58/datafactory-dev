@@ -35,22 +35,20 @@
 							{
 								"source": {
 									"name": "Order ID",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "order ID",
-									"type": "int",
-									"precision": 10
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
-								"source": {
-									"name": "Status",
-									"type": "String"
-								},
 								"sink": {
 									"name": "status",
-									"type": "varchar"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							}
 						],
@@ -63,7 +61,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Returns",
+						"referenceName": "Orders",
 						"type": "DatasetReference"
 					}
 				],
