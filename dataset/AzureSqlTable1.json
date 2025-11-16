@@ -117,7 +117,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Employees"
+			"table": "returns"
 		}
 	}
 }
