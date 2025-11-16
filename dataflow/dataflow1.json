@@ -44,7 +44,7 @@
 				"          Postal_Code as string,",
 				"          Order_Date as string,",
 				"          Ship_Date as string,",
-				"          Profit as string,",
+				"          Profit as integer,",
 				"          Quantity_Ordered_New as string,",
 				"          Sales as string,",
 				"          Order_ID as string",
