@@ -13,18 +13,9 @@
 				"fileName": "SuperStoreUS-2015.xlsx",
 				"container": "orders"
 			},
-			"sheetIndex": 1,
+			"sheetIndex": 0,
 			"firstRowAsHeader": true
 		},
-		"schema": [
-			{
-				"name": "Order ID",
-				"type": "String"
-			},
-			{
-				"name": "Status",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
