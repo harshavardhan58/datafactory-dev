@@ -20,7 +20,7 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     Rank_ as integer",
+				"     Rank_ as integer (sum(Sales))",
 				"}",
 				"source(output(",
 				"          Row_ID as string,",
@@ -46,7 +46,7 @@
 				"          Ship_Date as string,",
 				"          Profit as integer,",
 				"          Quantity_Ordered_New as string,",
-				"          Sales as string,",
+				"          Sales as integer,",
 				"          Order_ID as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
