@@ -23,6 +23,11 @@
 							"enablePartitionDiscovery": false
 						}
 					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
@@ -30,29 +35,44 @@
 							{
 								"source": {
 									"name": "Order ID",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "order ID",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "Status",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "status",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							}
-						]
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [
 					{
 						"referenceName": "Returns",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Orders_SQL1",
 						"type": "DatasetReference"
 					}
 				]
