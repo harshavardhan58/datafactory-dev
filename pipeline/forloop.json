@@ -109,7 +109,13 @@
 							"outputs": [
 								{
 									"referenceName": "sinkdataset",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
