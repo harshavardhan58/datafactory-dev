@@ -1,0 +1,117 @@
+{
+	"name": "Orders_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Row_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "Order_Priority",
+				"type": "varchar"
+			},
+			{
+				"name": "Discount",
+				"type": "varchar"
+			},
+			{
+				"name": "Unit_Price",
+				"type": "varchar"
+			},
+			{
+				"name": "Shipping_Cost",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Ship_Mode",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer_Segment",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_Category",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_Sub_Category",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_Container",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Product_Base_Margin",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Region",
+				"type": "varchar"
+			},
+			{
+				"name": "State_or_Province",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "Postal_Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Order_Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Ship_Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Profit",
+				"type": "varchar"
+			},
+			{
+				"name": "Quantity_Ordered_New",
+				"type": "varchar"
+			},
+			{
+				"name": "Sales",
+				"type": "varchar"
+			},
+			{
+				"name": "Order_ID",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ORDERS"
+		}
+	}
+}
