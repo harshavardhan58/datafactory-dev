@@ -33,6 +33,11 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
+								"source": {
+									"name": "Row ID",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Row_ID",
 									"type": "String",
@@ -40,6 +45,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Order Priority",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Order_Priority",
 									"type": "String",
@@ -59,6 +69,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Unit Price",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Unit_Price",
 									"type": "String",
@@ -66,6 +81,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Shipping Cost",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Shipping_Cost",
 									"type": "String",
@@ -73,6 +93,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Customer ID",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Customer_ID",
 									"type": "String",
@@ -80,6 +105,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Customer Name",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Customer_Name",
 									"type": "String",
@@ -87,6 +117,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Ship Mode",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Ship_Mode",
 									"type": "String",
@@ -94,6 +129,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Customer Segment",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Customer_Segment",
 									"type": "String",
@@ -101,6 +141,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Category",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Category",
 									"type": "String",
@@ -108,6 +153,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Sub-Category",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Sub_Category",
 									"type": "String",
@@ -115,6 +165,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Container",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Container",
 									"type": "String",
@@ -122,6 +177,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Name",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Name",
 									"type": "String",
@@ -129,6 +189,11 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Product Base Margin",
+									"type": "String",
+									"physicalType": "String"
+								},
 								"sink": {
 									"name": "Product_Base_Margin",
 									"type": "String",
