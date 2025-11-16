@@ -13,7 +13,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "rank1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          Row_ID as string,",
@@ -45,7 +49,9 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1"
+				"     format: 'table') ~> source1",
+				"source1 rank(asc(ERROR_FUNCTION(''), true),",
+				"     output({undefined} as long)) ~> rank1"
 			]
 		}
 	}
