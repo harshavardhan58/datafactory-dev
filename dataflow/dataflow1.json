@@ -20,7 +20,7 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     Rank_ as string",
+				"     Rank_ as string (rank(Profit))",
 				"}",
 				"source(output(",
 				"          Row_ID as string,",
